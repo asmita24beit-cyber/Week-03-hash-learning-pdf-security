@@ -6,11 +6,11 @@
 
 This repo documents two hands-on exercises in extracting and analyzing a PDF's security hash, to understand how predictable values can be matched using open dictionaries. The goal is to build awareness of why strong, unique values matter for document security — not to promote unauthorized access to protected files.
 
-All testing was performed on a self-generated test file (`My Locked PDF1.pdf`) in a controlled training environment as part of the Networkwalks Cybersecurity & Ethical Hacking internship program.
+All testing was performed on self-generated test files in a controlled training environment as part of the Networkwalks Cybersecurity & Ethical Hacking internship program.
 
 **Methods covered:**
 - ✅ Method 1: John the Ripper (JTR) + Johnny GUI
-- ⬜ Method 2: Networkwalks Hash Calculator + Comparison Tool *(coming soon)*
+- ✅ Method 2: Networkwalks Hash Calculator + Comparison Tool
 
 ---
 
@@ -59,7 +59,7 @@ Started the dictionary comparison via *Start new attack*. Johnny completed at 10
 **Step 8 — Unlock & verify**
 Opened `My Locked PDF1.pdf`, entered the matched value, and confirmed the flag.
 
-![PDF unlocked - flag captured](04-flag-captured.png)
+![PDF unlocked - flag captured(04-flag-captured.png)
 
 > **Flag captured:** `nw{cybersecurity_flag_captured_2608}`
 
@@ -70,34 +70,39 @@ The value **`good-luck`** was matched in a single automated dictionary pass, con
 
 ## Method 2: Networkwalks Hash Calculator + Comparison Tool
 
-*TODO — write-up and screenshots to be added*
-
-<!--
-Suggested structure once ready:
 ### Tools used
-- Networkwalks Hash Calculator (https://networkwalks.com/hash-calculator/)
-- Networkwalks Comparison Tool (https://networkwalks.com/password-cracker/)
+- [Networkwalks Hash Calculator](https://networkwalks.com/hash-calculator/) — browser-based hash extraction tool, parses the PDF locally with no upload to a server
+- [Networkwalks Comparison Tool](https://networkwalks.com/password-cracker/) — dictionary-based value matching against the extracted hash
 
 ### Process
-1. Upload PDF to Hash Calculator → extract $pdf$ hash
-2. Copy hash into the Comparison Tool
-3. Select wordlist (built-in or custom)
-4. Run comparison → observe live dictionary attempts
-5. Capture matched value
-6. Unlock PDF to verify
+
+**Step 1 — Open the Hash Calculator**
+Opened the tool and selected the **PDF** tab. No file uploaded yet.
+
+![Hash Calculator - empty state](01-hashcalculator-empty.png)
+
+**Step 2 — Upload the PDF & extract the hash**
+Uploaded the test file (`My Locked PDF1 (for NW Tools Lab WK3-PM2).pdf`, 65.2 KB). The tool confirmed the file is encrypted and extracted a `$pdf$...` hash in `pdf2john`/hashcat-compatible format locally in the browser.
+
+![Hash extracted](02-hash-extracted.png)
+
+> `Revision: R4  Version: V4  Key length: 128 bit`
+
+**Step 3 — Copy the hash & open the Comparison Tool**
+Copied the full hash value and opened the Comparison Tool in a new tab, which accepts the `$pdf$...` hash and runs it against a wordlist.
+
+**Step 4 — Paste the hash & run the comparison**
+Pasted the hash into the tool's input field and started the comparison using the built-in 100-word list.
+
+**Step 5 — Match found**
+The tool worked through its list and returned a match: **`password1`**.
+
+**Step 6 — Unlock & verify**
+Opened the PDF, entered the matched value, and confirmed the flag.
+
+![PDF unlocked - flag captured](03-pdf-unlocked.png)
+
+> **Flag captured:** `nw{networkwalks_flag1_jtr_270521_1}`
 
 ### Result
--->
-
----
-
-## Key Takeaways
-
-- A simple 8-character lowercase value can be matched in minutes; a strong 12+ character mixed value can take years to resolve.
-- Over 24 billion username/value pairs are already circulating from past breaches.
-- Predictable patterns remain among the most common values used worldwide.
-- Document encryption is only as strong as the value chosen — the hash algorithm itself is not the weak point, predictability is.
-
-## Disclaimer
-
-This project was completed for educational purposes as part of an authorized cybersecurity training program (Networkwalks internship), focused on hash learning and encryption awareness. All testing was performed on a self-owned test file. These techniques should only be used on systems/files you own or have explicit written authorization to test.
+The matched value for this test file was **`password1`** — a commonly used weak value — once again confirming how quickly predictable passwords can be resolved using freely available dictionary-based analysis tools.
