@@ -59,7 +59,7 @@ Started the dictionary comparison via *Start new attack*. Johnny completed at 10
 **Step 8 — Unlock & verify**
 Opened `My Locked PDF1.pdf`, entered the matched value, and confirmed the flag.
 
-![PDF unlocked - flag captured(04-flag-captured.png)
+![PDF unlocked - flag captured](04-flag-captured.png)
 
 > **Flag captured:** `nw{cybersecurity_flag_captured_2608}`
 
