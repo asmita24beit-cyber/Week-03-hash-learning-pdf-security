@@ -29,19 +29,17 @@ Downloaded the 64-bit jumbo Windows build and extracted it. `john.exe` is locate
 **Step 2 — Install Johnny GUI**
 Installed Johnny via `johnnyInstaller.exe`. On first launch, the table is empty and no comparison has been run yet.
 
-![Johnny - empty state](jtr-method/01-johnny-empty.png)
+![Johnny - empty state](01-johnny-empty.png)
 
 **Step 3 — Link Johnny to John the Ripper**
 In Settings, browsed to `john.exe` and confirmed detection.
 
-![Johnny - John the Ripper detected](jtr-method/02-johnny-settings-detected.png)
+![Johnny - John the Ripper detected](02-johnny-settings-detected.png)
 
 > Detected: `John the Ripper 1.9.0-jumbo-1 OMP [cygwin 64-bit x86_64 AVX2 AC]`
 
 **Step 4 — Extract the PDF's hash**
 Uploaded `My Locked PDF1.pdf` to the Online Hash Crack PDF Hash Extractor to obtain a `$pdf$...` hash for analysis.
-
-
 
 **Step 5 — Save the hash to a file**
 Copied the full hash into Notepad and saved it as `hash1.txt`.
@@ -52,7 +50,7 @@ Used *Open password file → PASSWD format* to load `hash1.txt`. Johnny correctl
 **Step 7 — Run the comparison**
 Started the dictionary comparison via *Start new attack*. Johnny completed at 100% with a match found.
 
-![Comparison complete - match found](jtr-method/03-attack-complete.png)
+![Comparison complete - match found](03-comparison-complete.png)
 
 | User | Matched Value | Format | Result |
 |------|---------------|--------|--------|
@@ -61,7 +59,7 @@ Started the dictionary comparison via *Start new attack*. Johnny completed at 10
 **Step 8 — Unlock & verify**
 Opened `My Locked PDF1.pdf`, entered the matched value, and confirmed the flag.
 
-![PDF unlocked - flag captured](jtr-method/04-flag-captured.png)
+![PDF unlocked - flag captured](04-flag-captured.png)
 
 > **Flag captured:** `nw{cybersecurity_flag_captured_2608}`
 
