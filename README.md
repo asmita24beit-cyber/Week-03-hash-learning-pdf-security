@@ -106,3 +106,15 @@ Opened the PDF, entered the matched value, and confirmed the flag.
 
 ### Result
 The matched value for this test file was **`password1`** — a commonly used weak value — once again confirming how quickly predictable passwords can be resolved using freely available dictionary-based analysis tools.
+
+## Key Takeaways
+
+- A simple 8-character lowercase value can be matched in minutes; a strong 12+ character mixed value can take years to resolve.
+- Over 24 billion username/value pairs are already circulating from past breaches.
+- Predictable patterns remain among the most common values used worldwide.
+- Document encryption is only as strong as the value chosen — the hash algorithm itself is not the weak point, predictability is.
+- Two independent tools, tested on two separate files, each converged on a weak, predictable value — reinforcing that this risk isn't tied to one tool or one file.
+
+## Disclaimer
+
+This project was completed for educational purposes as part of an authorized cybersecurity training program (Networkwalks internship), focused on hash learning and encryption awareness. All testing was performed on self-owned test files. These techniques should only be used on systems/files you own or have explicit written authorization to test.
