@@ -14,6 +14,21 @@ All testing was performed on self-generated test files in a controlled training 
 
 ---
 
+## Lab Environment
+
+| Parameter | Details |
+| --- | --- |
+| Trainee | Asmita Ashok Devkar |
+| Internship | Networkwalks |
+| Program/Batch | B084-Networkwalks |
+| Week | 03 |
+| Operating System | Windows |
+| Target File (Module 1) | My Locked PDF1.pdf |
+| Target File (Module 2) | My Locked PDF1 (for NW Tools Lab WK3-PM2).pdf |
+| Date | 16 November 2026 |
+
+---
+
 ## Method 1: John the Ripper + Johnny GUI
 
 ### Tools used
@@ -118,3 +133,12 @@ The matched value for this test file was **`password1`** — a commonly used wea
 ## Disclaimer
 
 This project was completed for educational purposes as part of an authorized cybersecurity training program (Networkwalks internship), focused on hash learning and encryption awareness. All testing was performed on self-owned test files. These techniques should only be used on systems/files you own or have explicit written authorization to test.
+
+## Author
+
+**Asmita Ashok Devkar**
+Cybersecurity Intern – Networkwalks
+**Program/Batch:** B084-Networkwalks
+**Domain:** Cybersecurity
+**Week:** 03
+**Modules:** W3-PM1 and W3-PM2
