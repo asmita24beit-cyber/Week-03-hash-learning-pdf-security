@@ -29,7 +29,7 @@ Downloaded the 64-bit jumbo Windows build and extracted it. `john.exe` is locate
 **Step 2 — Install Johnny GUI**
 Installed Johnny via `johnnyInstaller.exe`. On first launch, the table is empty and no comparison has been run yet.
 
-![Johnny - empty state](screenshots/jtr-method/01-johnny-empty.png)
+![Johnny - empty state](01-johnny-empty.png)
 
 **Step 3 — Link Johnny to John the Ripper**
 In Settings, browsed to `john.exe` and confirmed detection.
